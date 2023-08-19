@@ -1,0 +1,21 @@
+/* body{
+    background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtC0N7XhWppZHnLA1XOQUE4wIbgTt4kkDnn_3Om598oQ&s);
+    background-repeat: no-repeat;
+} */
+div{
+    background: blue;
+    /* border:orange;
+    border-width: 2px;
+    border-style:dotted; 
+    border-style: solid; */
+    border:red 10px dashed;
+}
+
+
+p{
+    color:yellow;
+}
+span{
+    background:red;
+    color:black;
+}

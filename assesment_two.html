@@ -1,0 +1,62 @@
+<!-- press shift,1, enter to get the basic html shell -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assesment_two
+        </title>
+        <meta charset="utf-8">
+
+
+    </head>
+
+    <body>
+        <h1>Puppy Adoption Page</h1>
+        <h2>Please enter your information to adopt a puppy and we'll email you back</h2>
+        <p>Please note: First Name, Last Name, Password, and Email are required</p>
+
+        <form method="get">
+
+
+            <label for = "first_name">First Name:</label>
+            
+            <input id = "first_name" type ='text' name = 'first_name' placeholder="First Name">
+
+            <label for = "last_name">Last Name:</label>
+            <input id = "last_name" type ='text' name = 'last_name' placeholder="Last Name">
+
+            <br><br>
+
+            <label for = "user_email">Email:</label>
+            <input id = "user_email" type="email" name = "useremail" placeholder="name@email.com">
+            
+            <label for = "user_pass">Password:</label>
+            <input id = "user_pass" type="password" name = "userpass" placeholder="password">           
+            
+            <p>Are you over the age of 18?</p>
+
+
+            <!-- name groups the buttons together -->
+            <!-- value is giving text to that button -->
+            <!-- link the id with for to give the label -->
+            <label for ='over_18_yes'>Yes:</label>
+            <input id ='over_18_yes' type = 'radio' name = 'user_age' value = 'yes'>
+
+
+            <label for = 'over_18_no'>No:</label>
+            <input id = 'over_18_no' type ='radio' name = 'user_age' value = 'no'>
+            
+            <p>Do you have a Credit Card or PayPal?</p>
+
+            <select name = 'dropdown'>
+                <option value = 'credit_card'>Credit card</option>
+                <option value = 'paypal'>PayPal</option>
+
+            </select>
+            <br><br>
+            <input type="submit" name = "" value = 'Submi feedback'>
+
+        </form>
+    </body>
+
+</html>
