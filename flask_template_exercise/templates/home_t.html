@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+   
+</head>
+
+
+
+    <body>
+        {% extends "base_3.html"%}
+        {% block content %}
+
+        <div class="jumbotron">
+            {% for i in range(1) %}
+            <br>
+            {% endfor %}
+
+            <p>Welcom to Puppy User Name Check</p>
+            <br>
+            <p>Let's see if your User Name is secure!</p>
+            <br>
+            <p>
+            Fill out the form below with a User Name that has these restraints
+            </p>
+            {%for words in first_list %}
+                <ul>
+                    <li>{{words}}</li>
+                </ul>
+            {%endfor%}
+
+            <form action="{{url_for('requirements')}}">
+                <label for="userInfo">UserName</label>
+                <input type="text", name="userInfo" placeholder="">
+                <input type="submit" name="" value="Submit" >
+            </form>
+        </div>
+
+        {% endblock content%}
+       
+
+
+
+    </body>
+
+
+
+</html>

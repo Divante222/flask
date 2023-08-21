@@ -1,0 +1,22 @@
+<h1>Welcome to the Puppy Survey</h1>
+<form method = 'post'>
+
+
+
+    <!-- just to reiterate {{form.food_choice.label}}{{form.food_choice(class = 'class_name')}}
+    to add css to any of the forms-->
+    {{form.hidden_tag()}}
+    {{form.breed.label}}{{form.breed}}
+    <br>
+    {{form.neutered.label}}{{form.neutered}}
+    <br>
+    {{form.food_choice.label}}{{form.food_choice}}
+    <br>
+    {{form.mood.label}}{{form.mood}}
+    <br>
+    Any other feedback?
+    <br>
+    {{form.feedback}}
+    <br>
+    {{form.submit()}}
+</form>

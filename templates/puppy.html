@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puppy_inheratance</title>
+</head>
+
+
+
+<body>
+    {% extends "base.html" %}
+    
+    {% block content %}
+    <!-- filter to  manipulate the name of the puppy-->
+    <h1>This is the puppy page for : {{name| capitalize}}</h1>
+    <!-- pass in the foldername and filename for a picture -->
+    <a href="{{url_for('static', filename = 'puppy.jpg')}}">Here</a>
+
+    {% endblock %}
+
+    
+</body>
+
+
+
+</html>
