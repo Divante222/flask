@@ -64,17 +64,24 @@ def register():
     #checks to see if the form has been submitted and the submitted data 
     #passes the validation rules defined in the forms fild's
     if form.validate_on_submit():
-        print('/n'*5)
-        print(form.email.data)
+      
         user = User(email=form.email.data,
                     username=form.username.data, 
                     password=form.password.data)
         
         #adding a record to the SQLAlchemy database
         #and commiting the information
-        
-        db.session.add(user)
-        db.session.commit()
+        with app.app_context():
+            db.metadata.create_all(bind=db.engine, tables=[User.__table__])
+            
+            db.session.add(user)
+            
+
+            session_objects = db.session.new   # New objects added to the session
+            print("Objects in session: sakura", session_objects)
+            print("Username:", user.username)
+            print("Email:", user.email)
+            db.session.commit()
 
 
         #flashes a message to the screen for the user to see
